@@ -64,7 +64,7 @@ public class UserController {
      */
     @GetMapping("/get/{userId}")
     public Reslut getUser(@PathVariable Integer userId) {
-        User user = userService.getById(id);
+        User user = userService.getById(userId);
         if (user == null) {
             return Reslut.Fail("用户不存在");
         }
