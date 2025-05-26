@@ -8,7 +8,7 @@ import lombok.Setter;
 import lombok.ToString;
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author chenxianyu
@@ -22,15 +22,33 @@ public class MedicalCard implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * ID
+     */
     private Long id;
 
+    /**
+     * 身份证号
+     */
     private Integer cardId;
 
+    /**
+     * 姓名
+     */
     private String fullName;
 
+    /**
+     * 疾病名称
+     */
     private String medlicalName;
 
+    /**
+     * 参保开始时间
+     */
     private LocalDate startTime;
 
+    /**
+     * 参保结束时间
+     */
     private LocalDate endTime;
 }
