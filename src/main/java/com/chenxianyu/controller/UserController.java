@@ -59,11 +59,11 @@ public class UserController {
 
     /**
      * 查询用户信息
-     * @param id 用户id
+     * @param userId 用户id
      * @return 用户信息
      */
-    @GetMapping("/get/{id}")
-    public Reslut getUser(@PathVariable Integer id) {
+    @GetMapping("/get/{userId}")
+    public Reslut getUser(@PathVariable Integer userId) {
         User user = userService.getById(id);
         if (user == null) {
             return Reslut.Fail("用户不存在");
@@ -73,12 +73,12 @@ public class UserController {
 
     /**
      * 删除用户
-     * @param id
+     * @param userId
      * @return
      */
-    @DeleteMapping("/delete/{id}")
-    public Reslut deleteUser(@PathVariable Integer id) {
-        boolean delete = userService.removeById(id);
+    @DeleteMapping("/delete/{userId}")
+    public Reslut deleteUser(@PathVariable Integer userId) {
+        boolean delete = userService.removeById(userId);
         if (!delete){
             return Reslut.Fail("删除失败");
         }
